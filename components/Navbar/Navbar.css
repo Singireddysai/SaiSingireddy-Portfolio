@@ -15,13 +15,13 @@
 }
 
 .nav-opt::after {
-  border-radius: 999;
+  border-radius: 999px;
   content: "";
   position: absolute;
   height: 2px;
   width: 0;
   background-color: rgb(180, 177, 177);
-  bottom: -5;
+  bottom: -5px;
   left: 50%;
   transform: translateX(-50%);
   transition: width 0.3s ease-in-out;
