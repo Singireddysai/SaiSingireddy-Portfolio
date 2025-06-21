@@ -1,0 +1,42 @@
+.navbar {
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(90, 85, 85, 0.2);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgb(70, 68, 68);
+}
+
+.nav-opt {
+  color: rgb(184, 186, 188);
+  position: relative; /* Required for ::after positioning */
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.nav-opt::after {
+  border-radius: 999;
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 0;
+  background-color: rgb(180, 177, 177);
+  bottom: -5;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-opt:hover::after {
+  width: 70%;
+}
+
+.nav-opt:hover {
+  color: white;
+  background-color: rgba(176, 161, 161, 0.2);
+}
+
+.contact {
+  color: rgb(255, 255, 255);
+  background-color: rgba(176, 161, 161, 0.2);
+}
