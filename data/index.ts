@@ -53,7 +53,7 @@ export const projects = [
       "GSAP",
     ],
     description:
-"Tween-Craft is a local-first tool that boosts low-FPS videos up to 8x using advanced VFI models, with a responsive UI, customizable settings, and full offline privacy."  },
+"Tween-Craft is a local-first tool that boosts low-FPS videos up to 8x using advanced VFI models, with a responsive UI, customizable settings, and full privacy."  },
   {
     Name: "GDA Case Study",
         githubLink:"https://github.com/Singireddysai/google-data-analytics-case-study",
