@@ -18,17 +18,20 @@ const MySkills = () => {
   return (
     <div id="skills" className="px-2 pt-24">
       <div className="flex flex-col justify-center items-center gap-2">
-        <motion.div ref={imageRef} style={{ rotate }} className="image">
+        <motion.div
+          ref={imageRef}
+          style={{ rotate }}
+          className="relative rounded-full size-54 md:size-94"
+        >
           <Image
-            className="rounded-full"
+            className="rounded-full object-cover"
             src="/steel-flower.webp"
             alt="Rotating steel flower"
-            height={324}
-            width={324}
+            fill
           />
         </motion.div>
 
-        <div className="text-center text-neutral-300 tracking-wide font-[300] text-6xl -mt-12">
+        <div className="text-center text-neutral-300 tracking-wide font-[300] text-5xl -mt-8">
           My Skills
         </div>
 

@@ -30,7 +30,7 @@ const GetInTouchButton = () => {
             <span className=" md:text-auto ml-2 px-1 md:px-2 py-1">
               Get in touch
             </span>
-            <div className="relative z-10 flex items-center justify-center overflow-hidden rounded-full p-2 md:p-2.5 transition-colors duration-300 dark:bg-white group">
+            <div className="relative z-10 flex items-center justify-center overflow-hidden rounded-full p-2 md:p-2.5 transition-colors duration-300 bg-white group">
               {/* First Arrow: slides out on hover (dark only) */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ const GetInTouchButton = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="lucide-arrow-right text-black transition-all duration-300 dark:group-hover:translate-x-5 dark:group-hover:opacity-0"
+                className="lucide-arrow-right text-black transition-all duration-300 group-hover:translate-x-5 group-hover:opacity-0"
                 aria-hidden="true"
               >
                 <path d="M5 12h14" />
@@ -59,7 +59,7 @@ const GetInTouchButton = () => {
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="lucide-arrow-right absolute text-black transition-all duration-300 -translate-x-5 opacity-0 dark:group-hover:translate-x-0 dark:group-hover:opacity-100"
+                className="lucide-arrow-right absolute text-black transition-all duration-300 -translate-x-5 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
                 aria-hidden="true"
               >
                 <path d="M5 12h14" />

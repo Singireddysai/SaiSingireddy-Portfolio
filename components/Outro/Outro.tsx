@@ -79,9 +79,12 @@ const Outro = () => {
                 initial={{ x: xOffset, opacity: 0 }}
                 animate={isInView ? { x: 0, opacity: 1 } : {}}
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-                className="text-3xl md:text-4xl font-light text-neutral-500 flex items-center gap-4 tracking-wider"
+                className="text-2xl md:text-4xl font-light text-neutral-500 flex items-center gap-1 tracking-wide"
               >
-                Let&apos;s Build It Together <OpenToWorkBadge />
+                <div className="text-center">Let&apos;s Build It Together</div>
+                <div className="p-1">
+                  <OpenToWorkBadge />
+                </div>
               </motion.div>
             </motion.div>
           }
@@ -92,9 +95,14 @@ const Outro = () => {
               Got Something <span className="text-indigo-800">Big</span> in
               Mind?
             </div>
-            <div className="text-3xl md:text-4xl font-light text-neutral-800 flex items-center gap-4 tracking-wider">
-              Let&apos;s Make It <span className="text-indigo-800">Happen</span>{" "}
-              <OpenToWorkBadge />
+            <div className="text-2xl md:text-4xl font-light text-neutral-800 flex items-center gap-1 tracking-wide">
+              <div className="text-center">
+                Let&apos;s Make It{" "}
+                <span className="text-indigo-800">Happen</span>{" "}
+              </div>
+              <div className="p-1">
+                <OpenToWorkBadge />
+              </div>
             </div>
           </div>
         </MaskContainer>

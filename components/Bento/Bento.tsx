@@ -155,7 +155,7 @@ export function GlowingEffectDemo() {
           />
           <div className=" bento-card group border-0.75 relative backdrop-blur-sm bg-[rgba(87,83,83,0.12)] flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl p-6 md:p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D]">
             <div className="relative flex flex-1 flex-col gap-3">
-              <div className="space-y-3">
+              <div className="space-y-3 w-full overflow-hidden">
                 <h3 className="transition-all duration-300 group-hover:-translate-y-2 bg-gradient-to-r mr-1 from-indigo-300 via-sky-100 to-white bg-clip-text text-transparent -tracking-4 pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-balance md:text-2xl/[1.875rem]">
                   Currently building a saas
                 </h3>

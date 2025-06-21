@@ -14,10 +14,10 @@ export default function AboutMe() {
     "User Friendly",
   ];
   const desc =
-    "As a Full-Stack Developer (and a little bit of Everything), I focus on crafting professional,user-centric applications that not only work flawlessly but also feel right. I blend clean design with efficient code to deliver solutions that are technically solid and visually appealing.";
+    "As a Full-Stack Developer (and a little bit of Everything), I focus on crafting professional, user-centric applications that not only work flawlessly but also feel right. I blend clean design with efficient code to deliver solutions that are technically solid and visually appealing.";
 
   const desc2 =
-    "When I'm not deep into work, I enjoy exploring new ideas and nurturing my curiosity. I value balance in life and strive to embrace every moment with intention.Each day is an opportunity, and I believe in starting it with purpose and a drive to make a meaningful impact.";
+    "When I'm not deep into work, I enjoy exploring new ideas and nurturing my curiosity. I value balance in life and strive to embrace every moment with intention. Each day is an opportunity, and I believe in starting it with purpose and a drive to make a meaningful impact.";
   return (
     <>
       <div id="about" className=" pt-28 flex flex-col px-2 lg:px-28">
@@ -29,7 +29,7 @@ export default function AboutMe() {
           <div className="text-5xl font-extrabold bg-gradient-to-b from-neutral-500 via-neutral-400 to-neutral-200 bg-clip-text text-transparent ">
             Building
             <br className="md:hidden" />
-            <div className="w-[380px]">
+            <div className="w-[360px]">
               <FlipWords words={words} />
               <br />
             </div>

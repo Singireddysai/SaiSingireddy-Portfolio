@@ -6,12 +6,12 @@ import React from "react";
 const OpenToWorkBadge = () => {
   return (
     <motion.div
-      className="pointer-events-none relative inline-flex items-center justify-center rounded-full bg-[rgba(127,127,127,0.2)] backdrop-blur-sm p-0 leading-none font-medium h-[110px] aspect-square"
+      className="pointer-events-none relative inline-flex items-center justify-center rounded-full bg-[rgba(127,127,127,0.2)] backdrop-blur-sm p-0 leading-none font-medium h-[105px] md:h-[110px] aspect-square"
       animate={{ rotate: 360 }}
       transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
     >
       {/* Inner black circle */}
-      <div className="relative size-[95px] rounded-full bg-black p-1">
+      <div className="relative size-[90px] md:size-[95px] rounded-full bg-black p-1">
         {/* Circular text path */}
         <div className="absolute top-1/2 left-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full">
           <svg
