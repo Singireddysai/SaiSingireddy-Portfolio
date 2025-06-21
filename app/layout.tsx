@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata = {
   title: "Sai Singireddy - Developer,Problem Solver, Techie",
-  description: "Your site description",
+  description: "A Full-Stack Web Dev and a bit of Everything",
 };
 
 const roboto = Roboto({
