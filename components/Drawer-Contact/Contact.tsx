@@ -91,7 +91,7 @@ const Contact = () => {
             </Link>
           </div>
 
-          <div className="flex justify-center grey border-1 border-neutral-800 rounded-[10px] mx-2 md:mx-auto mb-4 p-[2px]">
+          <div className="flex justify-center grey border-1 border-neutral-800 rounded-[10px] mx-auto md:mx-auto mb-4 p-[2px]">
             <Button
               className={`px-13 mdpx-16 py-1 rounded-[10px] transition-colors ${
                 tab === "mail"

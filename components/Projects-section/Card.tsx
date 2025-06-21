@@ -110,7 +110,7 @@ const Card = ({
                         scale: imageScale,
                       }}
                       initial={{ y: 0 }}
-                      whileHover={{ y: -10 }}
+                      whileHover={{ y: -8 }}
                       whileTap={{ scale: 0.97 }}
                       className="relative w-full max-w-2xl h-auto overflow-hidden rounded-lg "
                     >

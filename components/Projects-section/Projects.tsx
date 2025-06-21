@@ -24,7 +24,7 @@ const Projects = () => {
         </span>
       </div>
 
-      <div ref={container} className="flex flex-col justify-center">
+      <div ref={container} className="flex flex-col justify-center mt-6">
         {projects.map((project, index) => {
           const count = projects.length;
 

@@ -25,15 +25,19 @@ export default function AboutMe() {
           About Me
         </h2>
 
-        <div className="flex justify-start items-center px-2 ">
-          <div className="text-5xl font-extrabold bg-gradient-to-b from-neutral-500 via-neutral-400 to-neutral-200 bg-clip-text text-transparent">
+        <div className="flex justify-start items-center px-4">
+          <div className="text-5xl font-extrabold bg-gradient-to-b from-neutral-500 via-neutral-400 to-neutral-200 bg-clip-text text-transparent ">
             Building
             <br className="md:hidden" />
-            <FlipWords words={words} /> <br />
-            Web Experiences
+            <div className="w-[380px]">
+              <FlipWords words={words} />
+              <br />
+            </div>
+            Web
+            <br className="md:hidden" /> Experiences
           </div>
         </div>
-        <div className=" flex justify-end mt-16">
+        <div className=" flex justify-end mt-16 px-2">
           <Character text={desc} />
         </div>
         <div className=" flex flex-col justify-start mt-16">
