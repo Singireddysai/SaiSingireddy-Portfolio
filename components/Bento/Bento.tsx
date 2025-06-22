@@ -36,26 +36,22 @@ export function GlowingEffectDemo() {
             proximity={64}
             inactiveZone={0.01}
           />
-          <div className="bento-card group border-0.75 relative backdrop-blur-sm bg-[rgba(87,83,83,0.12)] flex h-full flex-col  gap-6 overflow-hidden rounded-xl p-6 md:p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D]">
-            <div className="relative flex flex-1 flex-col justify-between gap-3">
-              <div className="lottie absolute p-4 -top-22">
+          <div className="bento-card group border-0.75 relative backdrop-blur-sm bg-[rgba(87,83,83,0.12)] flex  flex-col  gap-6 overflow-hidden rounded-xl p-2 dark:shadow-[0px_0px_27px_0px_#2D2D2D]">
+            <div className="relative flex flex-1 flex-col justify-between items-center gap-3">
+              <div className="lottie flex justify-center items-center  p-2 size-77">
                 <Lottie
-                  height={100}
-                  width={200}
+                  height={42}
+                  width={42}
                   autoplay
                   loop
                   animationData={animationData}
                 />
               </div>
-              <div className="w-fit rounded-lg border border-gray-600 p-2">
-                <Box className="h-4 w-4 text-neutral-400" />
-              </div>
-              <BackgroundBeams />
 
-              <div className="space-y-3  mt-32 md:mt-22">
-                <h3 className="transition-all duration-300 group-hover:-translate-y-2 bg-gradient-to-r mr-1 from-indigo-300 via-sky-100 to-white bg-clip-text text-transparent -tracking-4 pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-balance md:text-3xl/[1.875rem]">
-                  I prioritize client collaboration, fostering open
-                  communication
+              <BackgroundBeams />
+              <div className="space-y-3 px-4 -mt-8 md:-mt-20 ">
+                <h3 className="pb-2 transition-all duration-300 group-hover:-translate-y-2 bg-gradient-to-r mr-1 from-indigo-300 via-sky-100 to-white bg-clip-text text-transparent -tracking-4 pt-0.5 font-sans text-2xl font-semibold text-balance md:text-3xl/[1.875rem]">
+                  I prioritize collaboration, fostering open communication
                 </h3>
               </div>
             </div>

@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/drawer";
 import Image from "next/image";
 
-const Contact = () => {
+const Contact = ({ str }: { str: string }) => {
   const [tab, setTab] = useState<"mail" | "form">("mail");
 
   return (
@@ -25,9 +25,7 @@ const Contact = () => {
       <Drawer>
         <DrawerTitle></DrawerTitle>
         <DrawerTrigger className="group connect flex items-center gap-1 p-2 rounded-full">
-          <span className=" md:text-auto ml-2 px-1 md:px-2 py-1">
-            Let&apos;s Connect
-          </span>
+          <span className=" md:text-auto ml-2 px-1 md:px-2 py-1">{str}</span>
           <div className="relative z-10 flex items-center justify-center overflow-hidden rounded-full p-2 md:p-2.5 transition-colors duration-300 bg-white group">
             {/* First Arrow: slides out on hover (dark only) */}
             <svg

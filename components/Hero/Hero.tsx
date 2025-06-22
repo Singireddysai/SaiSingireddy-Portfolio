@@ -96,7 +96,7 @@ const Hero = () => {
         <div className="cta-buttons flex justify-center flex-row">
           <div className="py-6 flex flex-col md:flex-row justify-center gap-4 md:gap-12 button-container">
             <div className="flex justify-center">
-              <Contact />
+              <Contact str="Let's Connect" />
             </div>
             <div className="flex text-md items-center px-4 py-3 mail text-neutral-200 rounded-full ">
               <button className="flex gap-2 items-center" onClick={handleCopy}>

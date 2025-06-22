@@ -1,5 +1,5 @@
 import React from "react";
-import GetInTouchButton from "../Drawer-Contact/GetInTouchButton";
+import Contact from "../Drawer-Contact/Contact";
 
 const GetInTouch = () => {
   return (
@@ -19,7 +19,7 @@ const GetInTouch = () => {
         </div>
         <div className="flex flex-col gap-4 justify-center items-center h-full w-full rounded-b-lg">
           <span className="-mt-12 text-3xl font-[300]">Let's Talk</span>
-          <GetInTouchButton />
+          <Contact str="Get in touch" />
         </div>
       </div>
     </>
