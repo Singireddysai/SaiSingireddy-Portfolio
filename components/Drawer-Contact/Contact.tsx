@@ -9,9 +9,7 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerDescription,
   DrawerFooter,
-  DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
@@ -19,6 +17,24 @@ import Image from "next/image";
 
 const Contact = ({ str }: { str: string }) => {
   const [tab, setTab] = useState<"mail" | "form">("mail");
+  const [status, setStatus] = useState<"idle" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData,
+    });
+
+    if (response.ok) {
+      setStatus("success");
+      e.currentTarget.reset();
+    } else {
+      setStatus("error");
+    }
+  };
 
   return (
     <div>
@@ -27,7 +43,6 @@ const Contact = ({ str }: { str: string }) => {
         <DrawerTrigger className="group connect flex items-center gap-1 p-2 rounded-full">
           <span className=" md:text-auto ml-2 px-1 md:px-2 py-1">{str}</span>
           <div className="relative z-10 flex items-center justify-center overflow-hidden rounded-full p-2 md:p-2.5 transition-colors duration-300 bg-white group">
-            {/* First Arrow: slides out on hover (dark only) */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -44,8 +59,6 @@ const Contact = ({ str }: { str: string }) => {
               <path d="M5 12h14" />
               <path d="m12 5 7 7-7 7" />
             </svg>
-
-            {/* Second Arrow: slides in on hover (dark only) */}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="20"
@@ -66,35 +79,30 @@ const Contact = ({ str }: { str: string }) => {
         </DrawerTrigger>
 
         <DrawerContent className="border contact-drawer border-neutral-700 bg-black text-white rounded-t-xl mx-auto max-w-2xl">
-          <div className="h-2 w-12 bg-zinc-800 rounded-full mx-auto -mt-4  mb-6 border border-zinc-700" />
-          <div className="flex justify-center items center gap-3 mb-4">
-            <Link href={"https://www.linkedin.com/in/sai-singireddy-8352a6291"}>
+          <div className="h-2 w-12 bg-zinc-800 rounded-full mx-auto -mt-4 mb-6 border border-zinc-700" />
+          <div className="flex justify-center gap-3 mb-4">
+            <Link href="https://www.linkedin.com/in/sai-singireddy-8352a6291">
               <Image
-                src={"/linkedin.svg"}
+                src="/linkedin.svg"
                 alt="linkedin"
                 height={18}
                 width={18}
               />
             </Link>
-            <Link href={"https://github.com/Singireddysai"}>
-              <Image src={"/github.svg"} alt="github" height={18} width={18} />
+            <Link href="https://github.com/Singireddysai">
+              <Image src="/github.svg" alt="github" height={18} width={18} />
             </Link>
-            <Link href={"https://x.com/Ak4zA__"}>
-              <Image
-                src={"/twitter.svg"}
-                alt="twitter"
-                height={18}
-                width={18}
-              />
+            <Link href="https://x.com/Ak4zA__">
+              <Image src="/twitter.svg" alt="twitter" height={18} width={18} />
             </Link>
           </div>
 
-          <div className="flex justify-center grey border-1 border-neutral-800 rounded-[10px] mx-auto md:mx-auto mb-4 p-[2px]">
+          <div className="flex justify-center grey border-1 border-neutral-800 rounded-[10px] mx-auto mb-4 p-[2px]">
             <Button
               className={`px-13 mdpx-16 py-1 rounded-[10px] transition-colors ${
                 tab === "mail"
                   ? "light-grey text-white border-1 border-neutral-600"
-                  : "bg-transparent "
+                  : "bg-transparent"
               }`}
               onClick={() => setTab("mail")}
             >
@@ -104,7 +112,7 @@ const Contact = ({ str }: { str: string }) => {
               className={`px-16 py-1 rounded-[10px] transition-colors ${
                 tab === "form"
                   ? "light-grey text-white border-1 border-neutral-600"
-                  : "bg-transparent "
+                  : "bg-transparent"
               }`}
               onClick={() => setTab("form")}
             >
@@ -139,11 +147,7 @@ const Contact = ({ str }: { str: string }) => {
             </div>
           ) : (
             <div className="px-6 rounded-2xl shadow-lg">
-              <form
-                action="https://api.web3forms.com/submit"
-                method="POST"
-                className="space-y-6"
-              >
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <input
                   type="hidden"
                   name="access_key"
@@ -179,8 +183,8 @@ const Contact = ({ str }: { str: string }) => {
                   </div>
                 </div>
 
-                <DrawerFooter className="flex justify-center items-center pt-4 ">
-                  <div className="flex gap-4 ">
+                <DrawerFooter className="flex flex-col items-center gap-4 pt-4">
+                  <div className="flex gap-4">
                     <Button
                       type="submit"
                       className="bg-neutral-500 w-36 text-white hover:bg-neutral-600 transition-all duration-150 group flex items-center gap-2"
@@ -188,17 +192,27 @@ const Contact = ({ str }: { str: string }) => {
                       Send
                       <Image
                         className="transition-all mt-1 rotate-[45deg] duration-200 group-hover:rotate-[15deg]"
-                        src={"/send.svg"}
+                        src="/send.svg"
                         alt="send"
                         height={24}
                         width={24}
                       />
                     </Button>
-
-                    <DrawerClose className="border-1 border-neutral-400 w-35 text-neutral-300 hover:bg-neutral-600 transition rounded-lg">
+                    <DrawerClose className="border-1 border-neutral-400 w-35 text-neutral-300 hover:bg-neutral-600 transition rounded-lg px-4 py-2">
                       Cancel
                     </DrawerClose>
                   </div>
+
+                  {status === "success" && (
+                    <p className="text-green-400 text-sm">
+                      ✅ Message sent successfully!
+                    </p>
+                  )}
+                  {status === "error" && (
+                    <p className="text-red-400 text-sm">
+                      ❌ Something went wrong. Try again.
+                    </p>
+                  )}
                 </DrawerFooter>
               </form>
             </div>
