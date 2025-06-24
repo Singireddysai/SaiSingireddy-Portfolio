@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import dynamic from "next/dynamic";
 
@@ -8,6 +8,16 @@ const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
 });
 
 export default function Globe() {
+  const [showGlobe, setShowGlobe] = useState(false);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setShowGlobe(true);
+    }, 3000);
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   const globeConfig = {
     pointSize: 4,
     globeColor: "#062056",
@@ -30,6 +40,7 @@ export default function Globe() {
     autoRotate: true,
     autoRotateSpeed: 0.5,
   };
+
   const colors = ["#06b6d4", "#3b82f6", "#6366f1"];
   const sampleArcs = [
     {
@@ -219,26 +230,24 @@ export default function Globe() {
     <div className="flex flex-row items-center justify-center relative w-full">
       <div className="max-w-4xl mx-auto w-full relative overflow-hidden h-[310px] md:h-[20rem] px-4">
         <motion.div
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            duration: 1,
-          }}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
           className="div"
         ></motion.div>
-        <div className="flex justify-center absolute w-full bottom-0 inset-x-0 h-40 bg-trnasparent-to-b pointer-events-none select-none] z-40" />
+
+        <div className="flex justify-center absolute w-full bottom-0 inset-x-0 h-40 bg-trnasparent-to-b pointer-events-none select-none z-40" />
+
         <h3 className="text-center flex justify-center transition-all duration-300 group-hover:-translate-y-2 bg-gradient-to-r mr-1 from-indigo-400 via-indigo-300 to-white bg-clip-text text-transparent -tracking-4 pt-0.5 font-sans text-xl/[1.375rem] font-semibold text-balance md:text-3xl/[1.875rem]">
           I&apos;m Very Flexible with Time Zone Communication
         </h3>
-        <div className="absolute w-full -mt-8 h-82 md:h-82 z-10">
-          <World data={sampleArcs} globeConfig={globeConfig} />
-        </div>
+
+        {/* Render the World component only after 5s */}
+        {showGlobe && (
+          <div className="absolute w-full -mt-8 h-82 md:h-82 z-10">
+            <World data={sampleArcs} globeConfig={globeConfig} />
+          </div>
+        )}
       </div>
     </div>
   );
