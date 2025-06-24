@@ -101,7 +101,7 @@ export const projects = [
 "A Streamlit app that predicts heart disease risk using ML, offering real-time results and a companion Jupyter notebook for full analysis."  },
   {
     Name: "Personal Portfolio",
-        githubLink:"",
+        githubLink:"https://github.com/Singireddysai/SaiSingireddy-Portfolio",
 
     subtitle: "A Seamless and interactive Personal Portfolio",
     img: "/project images/portfolio-cover.png",
