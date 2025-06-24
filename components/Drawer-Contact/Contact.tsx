@@ -147,7 +147,7 @@ const Contact = ({ str }: { str: string }) => {
                 <input
                   type="hidden"
                   name="access_key"
-                  value="YOUR_WEB3_FORMS_KEY_HERE"
+                  value="25ebc92d-feca-442d-85ce-b1f7fc9764b3"
                 />
 
                 <div className="flex flex-col items-center md:flex-row gap-6">
