@@ -2,6 +2,9 @@
 
 An interactive, responsive personal portfolio website to showcase your **projects**, **skills**, and **achievements** — all built with a modern tech stack and engaging UI/UX.
 
+## Live Site
+[🔗 View PortFolio](https://sai-singireddy.vercel.app/)
+
 ## ✨ Features
 
 - 🎯 Showcases **personal projects**, **skills**, and **achievements**
@@ -24,4 +27,4 @@ An interactive, responsive personal portfolio website to showcase your **project
 
 ## 📸 Preview
 
-![Portfolio Preview](https://your-image-url.com/preview.jpg)
+![Portfolio Preview](https://github.com/Singireddysai/SaiSingireddy-Portfolio/blob/d6567c9fc4112e85b007b83a7cf52e7fab61ec91/public/project%20images/portfolio-cover.png)
