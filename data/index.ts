@@ -32,7 +32,7 @@ export const projects = [
         githubLink:"https://github.com/Singireddysai/Tween-Craft",
 
     subtitle:
-      "Vedio Frame Interpolation that seamlessly generartes in-between frames",
+      "Video Frame Interpolation that seamlessly generartes in-between frames",
     img: "/project images/tweencraft-cover.png",
     gradientTop: "#323ba1",
     gradientBottom: "#1d1b1b",
