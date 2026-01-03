@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
               Work
             </a>
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1QWwyQGx3YBQCqImIaYn1_jo_WSyjT_1L/view?usp=sharing"
               className="text-gray-300 hover:text-white transition-colors duration-200 text-sm font-medium"
             >
               Resume
